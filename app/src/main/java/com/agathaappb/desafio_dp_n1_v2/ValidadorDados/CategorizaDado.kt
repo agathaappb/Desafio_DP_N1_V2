@@ -4,18 +4,13 @@ class CategorizaDado {
     fun categorizaDados(dadoUsuario:String):String{
         if(dadoUsuario.length == 11){
 
-
             val validaCPF = VerificaDadosCPF()
-
             return validaCPF.verificaDado(dadoUsuario)
-
-
-
-
 
         }else if(dadoUsuario.length == 14){
 
-            //CNPJ
+            val validaCNPJ = VerificaDadosCNPJ()
+            return validaCNPJ.verificaDado(dadoUsuario)
 
         }
         return "Dado inválido"

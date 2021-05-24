@@ -3,17 +3,17 @@ package com.agathaappb.desafio_dp_n1_v2.ValidadorDados
 class VerificaDadosCPF: VerificaDados {
     override fun verificaDado(inputUsuario: String): String{
 
-                        var codigo1 = codigoverificadorCPF1(inputUsuario)
-                        var codigo2 = codigoverificadorCPF2(inputUsuario)
+        var codigo1 = codigoVerificadorCPF1(inputUsuario)
+        var codigo2 = codigoVerificadorCPF2(inputUsuario)
 
-                        if (codigo1 == Integer.parseInt(inputUsuario.get(9).toString()) && codigo2 == Integer.parseInt(inputUsuario.get(10).toString())){
-                            return "CPF válido"
-                        }else return "CPF inválido"
+        if (codigo1 == Integer.parseInt(inputUsuario.get(9).toString()) && codigo2 == Integer.parseInt(inputUsuario.get(10).toString())){
+            return "CPF válido"
+        }else return "CPF inválido"
 
         return "Dado incorreto!"
     }
 
-    fun codigoverificadorCPF1(inputUsuario: String):Int{
+    fun codigoVerificadorCPF1(inputUsuario: String):Int{
 
         var verificadorCPF = 0
         var codigoverificacao1 = 0
@@ -34,7 +34,7 @@ class VerificaDadosCPF: VerificaDados {
             return codigoverificacao1
         }else return -1
     }
-    fun codigoverificadorCPF2(inputUsuario: String):Int{
+    fun codigoVerificadorCPF2(inputUsuario: String):Int{
 
         var verificadorCPF2 = 0
         var codigoverificacao2 = 0
